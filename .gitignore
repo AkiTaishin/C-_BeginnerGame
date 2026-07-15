@@ -31,3 +31,4 @@ Thumbs.db
 project.lock.json
 project.fragment.lock.json
 artifacts/
+*.slnx

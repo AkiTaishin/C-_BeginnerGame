@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "RpgBattle": {
+      "commandName": "Project",
+      "dotnetRunMessages": true,
+      "console": "integratedTerminal"
+    }
+  }
+}
