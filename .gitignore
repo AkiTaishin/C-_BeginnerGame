@@ -18,6 +18,10 @@
 .idea/
 .vscode/
 
+# Accidental duplicate sources (common cause of CS0229)
+**/*コピー*.cs
+**/*Copy*.cs
+
 # NuGet
 *.nupkg
 **/[Pp]ackages/*

@@ -2,13 +2,33 @@
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <!-- Visual Studio 2026 付属の .NET 10 でそのままビルドできるよう net10.0 を使用 -->
     <TargetFramework>net10.0</TargetFramework>
     <Nullable>enable</Nullable>
     <ImplicitUsings>enable</ImplicitUsings>
-    <LangVersion>latest</LangVersion>
+    <LangVersion>12.0</LangVersion>
     <RootNamespace>RpgBattle</RootNamespace>
     <AssemblyName>RpgBattle</AssemblyName>
+
+    <!--
+      重要: 既定の *.cs 自動取り込みをオフにし、ソースを1回だけ明示的にコンパイルする。
+      VS のアップグレード残骸や「〜のコピー.cs」があると
+      CS0229「'Character._name' と 'Character._name' 間があいまいです」が多発する。
+    -->
+    <EnableDefaultCompileItems>false</EnableDefaultCompileItems>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Include="Character.cs" />
+    <Compile Include="Warrior.cs" />
+    <Compile Include="Mage.cs" />
+    <Compile Include="Program.cs" />
+  </ItemGroup>
+
+  <!-- 誤ってコピーされたソースがいてもビルドに入れない -->
+  <ItemGroup>
+    <None Include="**/*コピー*.cs" />
+    <None Include="**/*Copy*.cs" />
+    <None Include="**/*(*).cs" />
+  </ItemGroup>
 
 </Project>

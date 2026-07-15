@@ -2,20 +2,15 @@
 
 オブジェクト指向学習用のコンソール RPG バトルひな型です。
 
-詳細は [RpgBattle/README.md](RpgBattle/README.md) を参照してください。
-
 ## クイックスタート（Visual Studio 2026）
 
-1. [`RpgBattle/RpgBattle.sln`](RpgBattle/RpgBattle.sln) を開く  
-2. Ctrl+Shift+B でビルド  
-3. Ctrl+F5 で実行  
+1. リポジトリ直下の [`RpgBattle.sln`](RpgBattle.sln) を開く  
+2. **ビルド → ソリューションのリビルド**  
+3. **Ctrl+F5** で実行  
 
-ターゲットフレームワークは **.NET 10 (`net10.0`)** です。  
-Visual Studio 2017 / Express では動作しません。
-
-コマンドライン:
+詳細・トラブルシュート（CS0229 のあいまいエラーなど）は [RpgBattle/README.md](RpgBattle/README.md) を参照してください。
 
 ```bash
-cd RpgBattle
-dotnet run
+dotnet build RpgBattle.sln
+dotnet run --project RpgBattle/RpgBattle.csproj
 ```
